@@ -1,0 +1,28 @@
+/* .hdata{
+    color:red;
+
+} */
+
+#btn {
+    background-color: red;
+    color: white;
+    /* margin-left:5%; */
+}
+    
+#cdata{
+    background-color:rgb(219,152,52);
+    border: solid;
+    width:50%;
+    padding: 20px;
+    margin: 100px auto;
+    text-align: center;
+}
+input{
+    border-radius:8px ;
+}
+h1{
+    text-align: center;
+}
+/* .ddata{
+    text-align: center;
+} */

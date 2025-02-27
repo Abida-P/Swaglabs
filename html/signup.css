@@ -1,0 +1,58 @@
+body {
+    font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #f4f4f9;
+    margin: auto;
+    padding-top: 5%;
+    height: 100%;
+    width:900px
+}
+.form-container {
+    background-color: #fff;
+    padding: 10px;
+    border-radius: 8px;
+    width: 300px;
+}
+h1 {
+    text-align: center;
+    color: #333;
+}
+.form_field {
+    width: 100%;
+    padding: 50px;
+    margin-bottom: 2px;
+ 
+ 
+}
+#sign{
+    background-color:blue ;
+    color: white;
+    border:none;
+    padding: 10px;
+    width:200px ;
+    text-align: center;
+    padding-bottom: 5px;
+    margin-bottom: 50px;
+    margin-left: 50px;
+   
+}
+.error-message {
+    color: red;
+    font-size: small;
+    font-family: cursive;
+}
+.password-error{
+    color: red;
+    font-size: small;
+    font-family: cursive;
+
+}
+.confirmpassword-error{
+    color: red;
+    font-size: small;
+    font-family: cursive;
+
+
+}

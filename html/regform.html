@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registerform</title>
+    <link rel="stylesheet" href="./style.css">
+    <script src="scriptinfo.js"></script>
+
+</head>
+<body style="background-color:rgb(219,152,52);">
+    <h1>Register</h1>
+    <p>*Name</p>
+    <p><input class="bdata" id="name" placeholder="Name"></p>
+
+    <p>*Email</p>
+    <p><input class="bdata" placeholder="Email"></p>
+    <p>*Password</p>
+    <p><input class="bdata" placeholder="Password"></p>
+    <p>*Confirm password</p>
+    <p><input class="bdata" placeholder="Confirm password"></p>
+    <p>
+    <input type="radio"  class="user"id="Admin"/>admin
+    <input type="radio"  class="user" id="Student"/>student
+    </p>
+    <p>
+    <select id="course" name="courses">
+        <option value="Ug">ug</option>
+        <option value="pg">pg</option>
+    </p>
+        <input type="checkbox" name="terms and conditions"/>Terms and conditions
+        
+    </select>
+   
+    
+
+    <button onclick="Data()" id="btn">Submit</button>
+    
+
+    
+    <style>
+    #btn {
+        background-color: red;
+        color: white;
+    }
+    </style>
+
+
+
+    <p style="color:red;font-size: 20px;">Good morning</p>
+
+    <!-- same color -->
+
+    <style>
+        /* #adata{
+            color:blue
+        }
+        #bdata{
+            color:blue;
+        } */
+         /* #cdata{
+            color:red;
+         } */
+        /* .hdata{
+            color:brown;
+
+        } */
+
+    </style>
+    <p id="adata" class="hdata">Good Afternoon</p>
+    <p id="bdata" class="hdata">Good Evening</p>
+    <p id="" class="hdata">Good Night</p>
+</body>
+</html>
