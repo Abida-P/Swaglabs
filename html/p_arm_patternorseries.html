@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Webpage</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align:center;
+            margin: 0;
+            padding: 0;
+            background-color: #2f92b3;
+        }
+
+        header {
+            background-color: white;
+            color: black;
+            padding: 1rem;
+            text-align: center;
+        }
+
+        main {
+            padding: 2rem;
+        }
+
+        ul {
+            list-style-type: none;
+            padding: 0;
+        }
+
+        li {
+            background-color: #ffffffdf;
+            padding: 15px;
+            margin: 10px;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+
+        li:hover {
+            background-color: #e0e0e0;
+        }
+
+        #result {
+            margin-top: 20px;
+            padding: 20px;
+            background-color: #fff;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Webpage</h1>
+    </header>
+    <main>
+        <ul id="menu">
+            <li onclick="checkPrime()">Check Prime Number</li>
+            <li onclick="checkArmstrong()">Check Armstrong Number</li>
+            <li onclick="displayPattern()">Display Number Pattern</li>
+        </ul>
+        <div id="result"></div>
+    </main>
+    <script>
+        
+        function checkPrime() {
+            let num = prompt("Enter a number to check if it's prime:");
+            if (num === null||num=="") return;
+            num=parseInt(num);
+            if(isNaN(num)){
+                document.getElementById("result").innerText="invalid input";
+                return;
+            }
+            let isPrime = num>1;
+            for (let i = 2; i <= Math.sqrt(num); i++){
+                if (num % i === 0){
+                    isPrime=false;
+                    break;
+                }
+
+            }
+             document.getElementById("result").innerText=isPrime ? num +"is a prime number":num + "is Not a prime number";
+            }
+
+        
+        function checkArmstrong() {
+            const number = prompt("Enter a number to check if it's an Armstrong number:");
+            if (number === null) return;
+
+            const digits = number.split('').map(Number);
+            const sum = digits.reduce((acc, digit) => acc + Math.pow(digit, digits.length), 0);
+
+            const resultDiv = document.getElementById('result');
+            resultDiv.innerHTML = `<p>${number} is ${sum == number ? 'an Armstrong' : 'not an Armstrong'} number.</p>`;
+        }
+        
+
+        function displayPattern() {
+            const rows = prompt("Enter the number of rows for the pattern:");
+            if (rows === null) return;
+
+            let pattern = '';
+            for (let i = 1; i <= rows; i++) {
+                for (let j = 1; j <= i; j++) {
+                    pattern += '* ';
+                }
+                pattern += '<br>';
+            }
+
+            const resultDiv = document.getElementById('result');
+            resultDiv.innerHTML = `<p>${pattern}</p>`;
+        }
+    </script>
+</body>
+</html>
